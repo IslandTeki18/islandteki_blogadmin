@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 
 const Header = () => {
     return (
-        <Navbar expand="lg" variant="light" bg="light">
+        <Navbar expand="lg" variant="dark" bg="dark">
             <Container>
                 <Navbar.Brand href="#">Navbar</Navbar.Brand>
             </Container>
