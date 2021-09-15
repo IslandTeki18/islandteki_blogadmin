@@ -1,9 +1,14 @@
-import React from 'react';
+import React from "react";
+import "./BlogPostListPage.scss";
 
 const BlogPostsListPage = () => {
     return (
-        <div>
-            <h1>Blog Post List Page</h1>
+        <div className="dkBlogPostListPage">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12"></div>
+                </div>
+            </div>
         </div>
     );
 };
