@@ -1,14 +1,11 @@
 import React from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
+import TopBar from "../../components/topBar/TopBar";
 
 const Header = () => {
     return (
-        <Navbar expand="lg" variant="dark" bg="dark">
-            <Container>
-                <Navbar.Brand href="#">Navbar</Navbar.Brand>
-            </Container>
-        </Navbar>
+        <div className="dkNavBar">
+            <TopBar />
+        </div>
     );
 };
 

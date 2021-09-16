@@ -6,7 +6,6 @@ import Col from "react-bootstrap/Col";
 import Sidebar from "./app/sidebar/Sidebar";
 import Routes from "./utils/Routes";
 import Header from "./app/header/Header";
-import Footer from "./app/footer/Footer";
 
 function App() {
     return (
@@ -15,16 +14,15 @@ function App() {
             <Container fluid>
                 <Router>
                     <Row className="no-gutters">
-                        <Col md={3} className="px-0">
+                        <Col md={2} className="px-0">
                             <Sidebar />
                         </Col>
-                        <Col md={9}>
+                        <Col md={10}>
                             <Routes />
                         </Col>
                     </Row>
                 </Router>
             </Container>
-            <Footer />
         </div>
     );
 }
