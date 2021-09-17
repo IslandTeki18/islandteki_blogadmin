@@ -1,20 +1,20 @@
 import { Switch, Route } from "react-router-dom";
-import LoginPage from "../pages/loginPage/LoginPage";
-import DashboardPage from "../pages/dashboardPage/DashboardPage";
-import BlogPostsListPage from "../pages/blogPostsListPage/BlogPostsListPage";
-import BlogPostDetailsPage from "../pages/blogPostDetailsPage/BlogPostDetailsPage";
-import BlogPostEditPage from "../pages/blogPostEditPage/BlogPostEditPage";
-import UserProfilePage from "../pages/userProfilePage/UserProfilePage";
+import LoginView from "../views/loginView/LoginView";
+import DashboardView from "../views/dashboardView/DashboardView";
+import BlogPostsListView from "../views/blogPostsListView/BlogPostsListView";
+import BlogPostDetailsView from "../views/blogPostDetailsView/BlogPostDetailsView";
+import BlogPostEditView from "../views/blogPostEditView/BlogPostEditView";
+import UserProfileView from "../views/userProfileView/UserProfileView";
 
 const Routes = () => {
     return (
         <Switch>
-            <Route path="/" exact component={LoginPage} />
-            <Route path="/dashboard" component={DashboardPage} />
-            <Route path="/post-list" component={BlogPostsListPage} />
-            <Route path="/post/:id" component={BlogPostDetailsPage} />
-            <Route path="/post/:id/edit" component={BlogPostEditPage} />
-            <Route path="/profile" component={UserProfilePage} />
+            <Route path="/" exact component={LoginView} />
+            <Route path="/dashboard" component={DashboardView} />
+            <Route path="/post-list" component={BlogPostsListView} />
+            <Route path="/post/:id" component={BlogPostDetailsView} />
+            <Route path="/post/:id/edit" component={BlogPostEditView} />
+            <Route path="/profile" component={UserProfileView} />
         </Switch>
     );
 };

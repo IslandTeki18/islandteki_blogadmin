@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BlogPostDetailsPage = () => {
+const BlogPostDetailsView = () => {
     return (
         <div>
             <h1>Blog Post Details Page</h1>
@@ -8,4 +8,4 @@ const BlogPostDetailsPage = () => {
     );
 };
 
-export default BlogPostDetailsPage;
+export default BlogPostDetailsView;
