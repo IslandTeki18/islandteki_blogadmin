@@ -8,6 +8,7 @@ const BlogPostsListView = () => {
                 <div className="row">
                     <div className="col-12">
                         {/* Table component of all the blog posts */}
+                        <h1>Blog Post List View</h1>
                     </div>
                 </div>
             </div>

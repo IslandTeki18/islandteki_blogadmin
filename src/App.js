@@ -1,13 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import Header from "./app/header/Header";
-import Layout from "./components/layout/Layout"
+import Sidebar from "./app/sidebar/Sidebar";
+import Routes from "./components/routes/Routes";
 
 function App() {
     return (
         <Router>
-            <Header />
-            <Layout />
+                <Header />
+                <Sidebar />
+                <Routes />
         </Router>
     );
 }
