@@ -1,17 +1,35 @@
-import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 import "./Sidebar.scss";
 import { sideBarItems } from "../../utils/sideBarItems";
 
 const Sidebar = () => {
     return (
-        <Nav className="flex-column dkSidebar" variant="pills" navbar={true}>
-            {sideBarItems.map((item) => (
-                <Nav.Link key={item.name}>
-                    <Link to={item.route}>{item.name}</Link>
-                </Nav.Link>
-            ))}
-        </Nav>
+        <div className="dkSidebar">
+            <div className="d-flex flex-column flex-shrink-0 p-3 bg-light">
+                <Link
+                    to="/"
+                    className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
+                >
+                    <i className="fas fa-columns snIcon me-3" />
+                    Admin Panel
+                </Link>
+                <hr />
+                <ul className="nav nav-pills flex-column mb-auto">
+                    {sideBarItems.map((item, idx) => (
+                        <li key={idx} className="nav-item">
+                            <Link
+                                to={item.route}
+                                className="nav-link link-dark"
+                            >
+                                <i className={`fas ${item.icon} me-3 snIcon`} />
+                                {item.name}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+                <hr />
+            </div>
+        </div>
     );
 };
 

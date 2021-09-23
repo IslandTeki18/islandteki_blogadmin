@@ -7,9 +7,9 @@ import Routes from "./components/routes/Routes";
 function App() {
     return (
         <Router>
-                <Header />
-                <Sidebar />
-                <Routes />
+            <Header />
+            <Sidebar />
+            <Routes />
         </Router>
     );
 }

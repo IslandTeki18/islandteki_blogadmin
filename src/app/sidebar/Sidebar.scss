@@ -1,4 +1,8 @@
 .dkSidebar {
     grid-area: sidenav;
-    background-color: orange;
+    height: 100vh;
+
+    .snIcon {
+        font-size: 20px;
+    }
 }
