@@ -1,6 +1,7 @@
 import React from "react";
 import "./DashboardView.scss";
 import OverviewCard from "../../components/overviewCards/OverviewCards";
+import DashboardCard from "../../components/dashboardCard/DashboardCard";
 
 const DashboardView = () => {
     function renderWelcomeHeaderRow() {
@@ -48,12 +49,22 @@ const DashboardView = () => {
             </div>
         );
     }
+
+    function renderDashboardCards() {
+        return (
+            <div className="py-3 main-cards">
+                <DashboardCard />
+                <DashboardCard />
+                <DashboardCard />
+            </div>
+        );
+    }
     return (
         <div className="dkDashboardView">
             <div className="container">
                 {renderWelcomeHeaderRow()}
                 {renderOverviewCardsRow()}
-                {/* Blog Post Row */}
+                {renderDashboardCards()}
             </div>
         </div>
     );
