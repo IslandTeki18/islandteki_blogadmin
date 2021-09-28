@@ -1,10 +1,11 @@
 import React from "react";
 import "./DashboardCard.scss";
 
-const DashboardCard = () => {
+const DashboardCard = (props) => {
     return (
         <div className="dkDashboardCard">
-            <h4>Dashboard Card</h4>
+            <h4>{props.title}</h4>
+            {props.children}
         </div>
     );
 };

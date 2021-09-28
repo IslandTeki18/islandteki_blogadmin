@@ -1,4 +1,6 @@
+@import "../../variables.scss";
+
 .dkRoutes {
     grid-area: main;
-    background-color: palegreen;
+    background-color: $secondary;
 }

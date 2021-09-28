@@ -7,7 +7,7 @@ import { POSTS } from "../../utils/dropDownLists";
 const Header = () => {
     return (
         <header className="dkHeader">
-            <div className="px-3 py-3 bg-dark text-white">
+            <div className="px-3 py-3 text-white">
                 <div className="container">
                     <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                         <Link

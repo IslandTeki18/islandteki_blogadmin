@@ -1,5 +1,8 @@
+@import "../../variables.scss";
+
 .dkSidebar {
     grid-area: sidenav;
+    background-color: $primary;
 
     .snIcon {
         font-size: 20px;

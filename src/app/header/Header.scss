@@ -1,3 +1,7 @@
+@import "../../variables.scss";
+
 .dkHeader {
     grid-area: header;
+    background-color: $secondary-800;
+    color: #000000;
 }

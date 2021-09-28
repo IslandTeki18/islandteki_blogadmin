@@ -53,9 +53,9 @@ const DashboardView = () => {
     function renderDashboardCards() {
         return (
             <div className="py-3 main-cards">
-                <DashboardCard />
-                <DashboardCard />
-                <DashboardCard />
+                <DashboardCard title="Recent Posts" />
+                <DashboardCard title="Page Views" />
+                <DashboardCard title="New Users" />
             </div>
         );
     }
