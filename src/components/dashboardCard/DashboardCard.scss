@@ -1,12 +1,11 @@
 .dkDashboardCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #82bef6;
-    margin-bottom: 20px;
-    -webkit-column-break-inside: avoid;
-    padding: 24px;
-    box-sizing: border-box;
+    min-height: 100px;
     height: auto;
+
+    .cardIcon {
+        font-size: 20px;
+    }
+    .dropdown-toggle::after {
+        display: none;
+    }
 }

@@ -2,6 +2,9 @@ import React from "react";
 import "./DashboardView.scss";
 import OverviewCard from "../../components/overviewCards/OverviewCards";
 import DashboardCard from "../../components/dashboardCard/DashboardCard";
+import Table from "../../components/table/Table"
+
+import {DUMMY_DATA} from "../../utils/dummyData"
 
 const DashboardView = () => {
     function renderWelcomeHeaderRow() {
@@ -52,10 +55,22 @@ const DashboardView = () => {
 
     function renderDashboardCards() {
         return (
-            <div className="py-3 main-cards">
-                <DashboardCard title="Recent Posts" />
-                <DashboardCard title="Page Views" />
-                <DashboardCard title="New Users" />
+            <div className="row py-3">
+                <div className="col-6">
+                    <DashboardCard title="Recent Posts">
+                        <Table data={DUMMY_DATA} />
+                    </DashboardCard>
+                </div>
+                <div className="col-6">
+                    <div className="row">
+                        <div className="col-12">
+                            <DashboardCard title="Popular Posts" />
+                        </div>
+                        <div className="col-12 pt-3">
+                            <DashboardCard title="New Users" />
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
