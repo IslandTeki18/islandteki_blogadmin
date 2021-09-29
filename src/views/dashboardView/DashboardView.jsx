@@ -2,11 +2,24 @@ import React from "react";
 import "./DashboardView.scss";
 import OverviewCard from "../../components/overviewCards/OverviewCards";
 import DashboardCard from "../../components/dashboardCard/DashboardCard";
-import Table from "../../components/table/Table"
+import Table from "../../components/table/Table";
+import Loader from "../../components/loader/Loader";
+import { useSelector, useDispatch } from "react-redux";
+import { listPosts } from "../../actions/post/post.actions";
 
-import {DUMMY_DATA} from "../../utils/dummyData"
+import { useEffect } from "react";
 
 const DashboardView = () => {
+    const dispatch = useDispatch();
+    const postList = useSelector((state) => state.postList);
+    const { loading, posts, error } = postList;
+
+    useEffect(() => {
+        dispatch(listPosts());
+    }, []);
+
+    console.log(posts);
+
     function renderWelcomeHeaderRow() {
         return (
             <div className="row py-3">
@@ -58,7 +71,13 @@ const DashboardView = () => {
             <div className="row py-3">
                 <div className="col-6">
                     <DashboardCard title="Recent Posts">
-                        <Table data={DUMMY_DATA} />
+                        {loading ? (
+                            <Loader />
+                        ) : error ? (
+                            <h1>{error}</h1>
+                        ) : (
+                            <Table data={posts} />
+                        )}
                     </DashboardCard>
                 </div>
                 <div className="col-6">
@@ -78,7 +97,7 @@ const DashboardView = () => {
         <div className="dkDashboardView">
             <div className="container">
                 {renderWelcomeHeaderRow()}
-                {renderOverviewCardsRow()}
+                {/* {renderOverviewCardsRow()} */}
                 {renderDashboardCards()}
             </div>
         </div>

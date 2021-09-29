@@ -2,10 +2,10 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 import {
-    postCreateReducer,
-    postDetailsReducer,
     postListReducer,
-} from "../reducers/postReducers";
+    postDetailsReducer,
+    postCreateReducer
+} from "../reducers/post/post.reducer";
 
 const reducer = combineReducers({
     postList: postListReducer,
