@@ -1,6 +1,7 @@
 import React from "react";
 import "./Table.scss";
 import PropTypes from "prop-types";
+import Icon from "../icon/Icon";
 
 const Table = ({ data }) => {
     function renderDataCells() {
@@ -14,13 +15,26 @@ const Table = ({ data }) => {
                               <td>{post.title}</td>
                               <td>{post.author}</td>
                               <td>
-                                  <button className="btn btn-info">
-                                      <i class="fas fa-edit tableIcon" />
+                                  <button className="btn btn-link btn-small">
+                                      <Icon className="fas fa-eye" size={20} />
                                   </button>
                               </td>
                               <td>
-                                  <button className="btn btn-danger">
-                                      <i class="fas fa-trash tableIcon" />
+                                  <button className="btn btn-link">
+                                      <Icon
+                                          className="fas fa-edit"
+                                          size={20}
+                                          color="grey"
+                                      />
+                                  </button>
+                              </td>
+                              <td>
+                                  <button className="btn btn-link">
+                                      <Icon
+                                          className="fas fa-trash"
+                                          size={20}
+                                          color="red"
+                                      />
                                   </button>
                               </td>
                           </tr>
@@ -36,6 +50,7 @@ const Table = ({ data }) => {
                     <th scope="col">ID</th>
                     <th scope="col">Post Name</th>
                     <th scope="col">Author</th>
+                    <th scope="col">View</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
                 </tr>
