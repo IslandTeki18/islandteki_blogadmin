@@ -1,6 +1,9 @@
+@import "../../variables.scss";
+
 .dkDashboardCard {
     min-height: 100px;
     height: auto;
+    background-color: $primary;
 
     .cardIcon {
         font-size: 20px;

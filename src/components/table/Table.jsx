@@ -60,7 +60,7 @@ const Table = ({ data }) => {
                 </div>
             ) : (
                 <div className="table-responsive">
-                    <table className="dkTable table table-bordered text-center">
+                    <table className="dkTable table table-bordered text-center text-white">
                         <thead>
                             <tr>
                                 <th scope="col">ID</th>

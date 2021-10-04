@@ -7,7 +7,7 @@ const DashboardCard = (props) => {
         <div className="dkDashboardCard card">
             <div className="card-body">
                 <div className="row">
-                    <div className="col-6 align-items-center">
+                    <div className="col-6 align-items-center text-white">
                         <h4>{props.title}</h4>
                     </div>
                     <div className="col-6 text-end">

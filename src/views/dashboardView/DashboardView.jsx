@@ -39,28 +39,36 @@ const DashboardView = () => {
         return (
             <div className="row">
                 <div className="col-3">
-                    <OverviewCard
-                        title="Overview Card"
-                        subTitle="This is just a test"
-                    />
+                    <OverviewCard>
+                        <div className="text-center">
+                            <h1>2</h1>
+                            <h4 className="text-uppercase">New Posts</h4>
+                        </div>
+                    </OverviewCard>
                 </div>
                 <div className="col-3">
-                    <OverviewCard
-                        title="Overview Card"
-                        subTitle="This is just a test"
-                    />
+                    <OverviewCard>
+                        <div className="text-center">
+                            <h1>3</h1>
+                            <h4 className="text-uppercase">New Users</h4>
+                        </div>
+                    </OverviewCard>
                 </div>
                 <div className="col-3">
-                    <OverviewCard
-                        title="Overview Card"
-                        subTitle="This is just a test"
-                    />
+                    <OverviewCard>
+                        <div className="text-center">
+                            <h1>$1,923</h1>
+                            <h4 className="text-uppercase">Revenue</h4>
+                        </div>
+                    </OverviewCard>
                 </div>
                 <div className="col-3">
-                    <OverviewCard
-                        title="Overview Card"
-                        subTitle="This is just a test"
-                    />
+                    <OverviewCard>
+                        <div className="text-center">
+                            <h1>203</h1>
+                            <h4 className="text-uppercase">Recent Comments</h4>
+                        </div>
+                    </OverviewCard>
                 </div>
             </div>
         );
@@ -97,7 +105,7 @@ const DashboardView = () => {
         <div className="dkDashboardView">
             <div className="container">
                 {renderWelcomeHeaderRow()}
-                {/* {renderOverviewCardsRow()} */}
+                {renderOverviewCardsRow()}
                 {renderDashboardCards()}
             </div>
         </div>
