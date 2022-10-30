@@ -5,12 +5,14 @@ import {
     postListReducer,
     postDetailsReducer,
     postCreateReducer
-} from "../reducers/post/post.reducer";
+} from "../redux/reducers/post.reducer";
+import { userLoginReducer } from "../redux/reducers/users.reducer";
 
 const reducer = combineReducers({
     postList: postListReducer,
     postDetails: postDetailsReducer,
     postCreate: postCreateReducer,
+    userLogin: userLoginReducer,
 });
 
 const userInfoFromStorage = localStorage.getItem("userInfo")

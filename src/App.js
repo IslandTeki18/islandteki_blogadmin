@@ -1,17 +1,18 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import { PrivateRoute } from "./components/privateRoute/PrivateRoute";
 import Header from "./app/header/Header";
-import Sidebar from "./app/sidebar/Sidebar";
-import Routes from "./components/routes/Routes";
+import LoginView from "./views/loginView/LoginView";
 
 function App() {
-    return (
-        <Router>
-            <Header />
-            <Sidebar />
-            <Routes />
-        </Router>
-    );
+  return (
+    <main>
+      <Switch>
+        <Route index path="/">
+          <LoginView />
+        </Route>
+      </Switch>
+    </main>
+  );
 }
 
 export default App;
