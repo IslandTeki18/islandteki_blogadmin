@@ -5,6 +5,7 @@ import { Route, Redirect } from "react-router-dom";
 export const PrivateRoute = ({ children, ...rest }) => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
+
   return (
     <Route
       {...rest}
@@ -12,7 +13,7 @@ export const PrivateRoute = ({ children, ...rest }) => {
         userInfo ? (
           children
         ) : (
-          <Redirect to={{ pathname: "/login", state: { from: location } }} />
+          <Redirect to={{ pathname: "/", state: { from: location } }} />
         )
       }
     />

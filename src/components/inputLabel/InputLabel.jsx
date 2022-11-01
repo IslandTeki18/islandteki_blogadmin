@@ -3,7 +3,7 @@ import React from "react";
 const InputLabel = (props) => {
   return (
     <div className="dkInputLabel">
-      <label htmlFor={props.id} class="form-label">
+      <label htmlFor={props.id} className="form-label">
         {props.label}
       </label>
       <input
