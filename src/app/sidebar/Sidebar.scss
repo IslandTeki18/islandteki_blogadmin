@@ -1,10 +1,10 @@
 @import "../../variables.scss";
 
 .dkSidebar {
-    grid-area: sidenav;
-    background-color: $primary;
+  background-color: $primary;
+  height: 100vh;
 
-    .snIcon {
-        font-size: 20px;
-    }
+  .snIcon {
+    font-size: 20px;
+  }
 }

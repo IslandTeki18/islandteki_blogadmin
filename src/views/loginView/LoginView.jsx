@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./LoginView.scss";
 import { useDispatch, useSelector } from "react-redux";
 import InputLabel from "../../components/inputLabel/InputLabel";
@@ -16,7 +16,7 @@ const LoginView = ({ history }) => {
   const [showError, setShowError] = useState(false);
 
   const userLogin = useSelector((state) => state.userLogin);
-  const { error, loading, userInfo } = userLogin;
+  const { error, userInfo } = userLogin;
 
   useEffect(() => {
     if (userInfo) {
@@ -31,6 +31,7 @@ const LoginView = ({ history }) => {
     }
     isFormFilledOut();
   }, [userForm, history, userInfo, error]);
+
   useEffect(() => {
     if (error) {
       setShowError(true);
