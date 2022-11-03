@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Switch, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Routes from "./components/routes/Routes";
@@ -18,9 +18,8 @@ function App() {
   return (
     <main>
       <Switch>
-        <Route path="/login">
-          <LoginView />
-        </Route>
+        <Route path="/login" component={LoginView} />
+
         <Routes />
       </Switch>
     </main>
