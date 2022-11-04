@@ -1,4 +1,5 @@
 import React from "react";
+import "./Routes.scss"
 import { Header } from "../../app/header";
 import { Sidebar } from "../../app/sidebar";
 import Container from "react-bootstrap/Container";
@@ -8,8 +9,8 @@ import { PrivateRoute } from "../privateRoute/PrivateRoute";
 
 const Routes = () => {
   return (
-    <React.Fragment>
-      <Container fluid className="g-0">
+    <div className="dkRoutes">
+      <Container fluid className="g-0 backgroundColor">
         <Row className="g-0">
           <div className="col-2">
             <Sidebar />
@@ -22,7 +23,7 @@ const Routes = () => {
           </div>
         </Row>
       </Container>
-    </React.Fragment>
+    </div>
   );
 };
 

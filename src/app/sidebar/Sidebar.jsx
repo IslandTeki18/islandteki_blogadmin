@@ -7,11 +7,11 @@ export const Sidebar = () => {
     <div className="dkSidebar">
       <div className="d-flex flex-column flex-shrink-0 p-3 h-100 text-white">
         <Link
-          to="/"
+          to="/dashboard"
           className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none text-white"
         >
           <i className="fas fa-columns snIcon me-3" />
-          Admin Panel
+          Blog Admin Panel
         </Link>
         <hr />
         <ul className="nav nav-pills flex-column mb-auto">

@@ -1,5 +1,7 @@
 import React from "react";
 import "./DashboardView.scss";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import { useSelector, useDispatch } from "react-redux";
 import OverviewCard from "../../components/overviewCards/OverviewCards";
 import DashboardCard from "../../components/dashboardCard/DashboardCard";
@@ -11,8 +13,14 @@ const DashboardView = () => {
   const dispatch = useDispatch();
   return (
     <div className="dkDashboardView">
-      <div className="container">
-        <h2>Dashboard view</h2>
+      <div className="container-fluid">
+        <Row className="py-4">
+          <Col md={3}>
+            <DashboardCard title="Recent Posts">
+
+            </DashboardCard>
+          </Col>
+        </Row>
       </div>
     </div>
   );
